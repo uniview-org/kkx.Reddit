@@ -1,8 +1,6 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
-using kkx.Reddit.Types.Responses;
 using RestSharp;
-using RestSharp.Authenticators;
 
 namespace kkx.Reddit {
 	public partial class RedditApi {
@@ -12,6 +10,7 @@ namespace kkx.Reddit {
 		public string RefreshToken { get; set; }
 		public string ClientId { get; set; }
 		public string ClientSecret { get; set; }
+		public string DeviceId { get; set; } = "DO_NOT_TRACK_THIS_DEVICE";
 		public string UserAgent { get; set; } = "kkx.Reddit";
 
 		readonly IRestClient _client;
